@@ -218,7 +218,7 @@ pm.max_spare_servers = 3
 
 
 ## 参考
-参考：<https://blog.csdn.net/skykingf/article/details/51957298>
-参考：<https://www.cnblogs.com/mzhaox/p/11215153.html>
-参考：<https://www.jianshu.com/p/d49a094ce2ca>
-参考：<http://hanc.cc/index.php/archives/179/?replyTo=209>
+- 参考：<https://blog.csdn.net/skykingf/article/details/51957298>
+- 参考：<https://www.cnblogs.com/mzhaox/p/11215153.html>
+- 参考：<https://www.jianshu.com/p/d49a094ce2ca>
+- 参考：<http://hanc.cc/index.php/archives/179/?replyTo=209>
