@@ -901,7 +901,7 @@ Array
 例：`$a=2,$b=3;$arr =compact("a","b");var_dump($arr);`
 extract() — 从数组中将变量导入到当前的符号表，作用于compact相反；
 
-## 第七章
+## 类
 ### 37 类
 - A 类是对象的描述，创建类，才能创建对象；
 对象两个特性：属性和行为；
@@ -1614,7 +1614,7 @@ class Controller extends fi\base\Controller //注意：两个类名一样，必�
 
 
 
-## 第八章    字符串
+## 字符串
 
 ### 48 字符串的声明
 A 可以使用双引号 ，也可以使用单引号；双引号可以解析变量，双引号可以使用转义字符；
@@ -1821,7 +1821,7 @@ v  `substr_count` — 计算字串出现的次数;
 w  `wordwrap` — 打断字符串为指定数量的字串
 
 
-## 第九章  正则表达式  
+## 正则表达式  
 
 
 1 正则表达式，就是一个匹配“模式”；正则表达式本身就是一个含有一些语法规则的字符串；
@@ -2047,7 +2047,7 @@ j  `string preg_quote ( string $str [, string $delimiter = NULL ] ) preg_quote()
    即：$str字符串中所有符号是需要匹配的符号，不是在正则表达式中有特殊意义的；
 
 
-## 第十章   调试错误
+## 调试错误
 
 
 ### 2 错误类型
@@ -2181,7 +2181,7 @@ try{
 
 
 
-## 第十一章   日期和时间
+## 日期和时间
 
 ### 8 时间戳：a 是一个整数 b 是从1970年1月1日（计算机元年）到现在的秒数，但是注意是格林时间；
 - A  `time()` 返回时间戳，即秒数
@@ -2242,7 +2242,7 @@ echo microtime(true);
 
 
 
-## 第十二章 文件系统
+## 文件系统
 ### 10 文件类型
 在windows下：file、dir、unknown
 在unix下：file、dir、block、char、fifo、link、unknown；
@@ -2602,7 +2602,8 @@ readfile($filename);
 
 
 
-## 第十三章  GD库使用（PHP的扩展库，其实ImageMagick库比前者还要强大）
+## GD库使用
+（PHP的扩展库，其实ImageMagick库比前者还要强大）
 GD库作用：统计图，验证码，水印，图片缩放，图片翻转，图片剪切；
 GD库在linux下需要单独安装；
 必须学习ImageMagick;
@@ -2775,7 +2776,7 @@ function fanzhuan($filename){
 
 
 
-## 第十四章  数据库
+## 数据库
 ### 22 mysql常用知识
 A 环境变量：操作系统运行环境的一些参数，如：临时文件夹和系统文件夹；
 windows设置环境变量方式：计算机-右键-属性-高级系统设置-环境变量-path（如果没有就添加）-设置路径；
@@ -3173,7 +3174,10 @@ c 处理数据的查询结果
 `$statement->fetch([ int $fetch_style [, int $cursor_orientation = PDO::FETCH_ORI_NEXT [, int $cursor_offset = 0 ]]]) ` 从结果集中获取下一行，有点相当于mysql_fetch_array() ，参数 PDO::FETCH_ASSOC 返回关联数组；PDO::FETCH_BOTH（默认）既返回关联数组又返回索引数组；PDO::FETCH_NUM返回索引数组；这些常量在PDO-预定义常量里；
 例：`list($id,$name,$price) = $statement->fetch(PDO::FETCH_NUM);`
 
-`$statement->fetchAll([ int $fetch_style [, mixed $fetch_argument [, array $ctor_args = array() ]]] )`  返回一个包含结果集中所有行的数组，该函数指针随fetch()函数影响，即前面fetch()函数取得了行，该函数将不再取；想要返回一个包含结果集中单独一列所有值的数组，需要指定 PDO::FETCH_COLUMN 。通过指定 column-index 参数获取想要的列。详情：http://php.net/manual/zh/pdostatement.fetchall.php；
+`$statement->fetchAll([ int $fetch_style [, mixed $fetch_argument [, array $ctor_args = array() ]]] )`  
+
+返回一个包含结果集中所有行的数组，该函数指针随fetch()函数影响，即前面fetch()函数取得了行，该函数将不再取；想要返回一个包含结果集中单独一列所有值的数组，需要指定 PDO::FETCH_COLUMN 。通过指定 column-index 参数获取想要的列。详情：<http://php.net/manual/zh/pdostatement.fetchall.php>；
+
 例：`print_r($statement->fetchAll(PDO::FETCH_ASSOC));`
 
 `$statement->setFetchMode() ` 为后面所有语句设置默认的获取模式，但如果后面自己fetch()和fetchAll()传递了参数模式预定义常量，那么还是以自己传递的常量为准；
@@ -3241,7 +3245,8 @@ g 代码规范：
 C    类 PDOException    处理异常
 
 
-## 第十六章  memcache应用（内存做缓存），端口11211；
+## memcache应用
+端口11211；
 ### 41 memcache
 A 基本信息
 memcache是一个软件（管理系统），把数据往内存中存，消耗CPU很少，用内存较多；
@@ -3419,7 +3424,7 @@ memcache 服务器的安全防护
 
 
 
-### 第十七章    http协议和web本质
+### http协议和web本质
 44 http协议：超文本传输协议，浏览器和服务器之间“沟通”的一种规范；在得到资源（即页面）后，连接立即中断；即是无状态的，无法判断是从哪个网页到这个网页的，每次进入新的网页或者刷新网页都是新的请求，http协议并不会跟踪用户；
 
 A 请求：
@@ -3744,7 +3749,7 @@ C  memcache存储方式原理：利用memcache能向内存中存储key和value�
 
 
 
-## 第十八章 模板引擎
+## 模板引擎
 
 47 自定义模板引擎步骤（主要应用了字符串的替换）
 a 在模板（hmtl代码）中插入需要的变量名；例：`<title>{$title}</title>`
